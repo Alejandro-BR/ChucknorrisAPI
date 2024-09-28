@@ -1,18 +1,21 @@
 <app-title></app-title>
 
-<section class="card">
-  @for (fact of facts; track fact.id) {
-    <a>
-      <img [src]="fact.icon_url">
-      
-      <br><br>
+<div class="container"> 
+  <section class="card">
+    @for (fact of facts; track fact.id) {
+      <a>
+        <img [src]="fact.icon_url">
+        <br><br>
+        <div>{{fact.value}}</div>
+      </a>
+    } @empty {
+      <div>
+        <p>Cargando....</p>
+      </div>
+    }
+  </section>
 
-      <div>{{fact.value}}</div>
-    </a>
-  } @empty {
-    <div>
-      <p>Cargando....</p>
-    </div>
-  }
-  
-</section>
+  <section class="button-section">
+    <button (click)="getNewFact()">Nuevo Hecho</button>
+  </section>
+</div>

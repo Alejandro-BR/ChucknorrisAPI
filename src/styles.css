@@ -1,5 +1,4 @@
 :root {
-  /* Variables para modo oscuro */
   --background-color: #212121;  
   --text-color: #e0e0e0;         
 }
@@ -11,21 +10,8 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-}
-
-button {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: var(--secondary-color);
+  justify-content: center; 
+  align-items: center; 
 }
 
 p {

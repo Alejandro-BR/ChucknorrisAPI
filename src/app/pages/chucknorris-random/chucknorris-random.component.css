@@ -1,20 +1,40 @@
-
-section {
+.container {
   display: flex;
-  justify-content: center; /* Asegura que los elementos dentro se centren */
-  align-items: center; /* Centra verticalmente si hay más de un elemento */
-  gap: 50px; /* Espacio entre los elementos */
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px;
 }
 
 .card {
-  background-color: #1e1e1e; /* Fondo de la tarjeta */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px; /* Espacio interno */
-  width: 400px; /* Ancho de la tarjeta */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
-  text-align: center; /* Centrar el texto dentro de la tarjeta */
+  background-color: #1e1e1e; 
+  border-radius: 10px; 
+  padding: 20px; 
+  width: 400px; 
+  height: 200px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  text-align: center; 
 }
 
 p {
-  text-align: center; /* Asegura que el texto esté centrado */
+  text-align: center;
+}
+
+button {
+  background-color: #4a90e2; 
+  color: white;
+  border: none; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 16px; 
+  margin: 10px 0; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  width: 90px; 
+  height: 60px;
+}
+
+button:hover {
+  background-color: #4281c9; 
 }

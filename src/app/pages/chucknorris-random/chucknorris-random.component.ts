@@ -15,10 +15,21 @@ export class ChucknorrisRandomComponent implements OnInit {
 
   facts: Fact[] = [];
 
-  constructor (private chuckapi: ChuckapiService) {}
+  constructor(private chuckapi: ChuckapiService) { }
 
   async ngOnInit(): Promise<void> {
     this.facts = await this.chuckapi.factRandom();
   }
 
+  /**
+   * Obtiene un fact nuevo
+   * y sustituye el anterior.
+   */
+  async getNewFact(): Promise<void> {
+    const newFact = await this.chuckapi.factRandom(); 
+    this.facts = [newFact[0]]; 
+  }
+
 }
+
+
