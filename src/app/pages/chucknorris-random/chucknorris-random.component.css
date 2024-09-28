@@ -1,0 +1,20 @@
+
+section {
+  display: flex;
+  justify-content: center; /* Asegura que los elementos dentro se centren */
+  align-items: center; /* Centra verticalmente si hay más de un elemento */
+  gap: 50px; /* Espacio entre los elementos */
+}
+
+.card {
+  background-color: #1e1e1e; /* Fondo de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espacio interno */
+  width: 400px; /* Ancho de la tarjeta */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+  text-align: center; /* Centrar el texto dentro de la tarjeta */
+}
+
+p {
+  text-align: center; /* Asegura que el texto esté centrado */
+}

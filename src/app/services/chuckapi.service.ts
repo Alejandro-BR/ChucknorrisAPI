@@ -8,7 +8,7 @@ import { forkJoin, lastValueFrom, Observable } from 'rxjs';
 })
 export class ChuckapiService {
 
-  readonly BASE_URL = 'https://api.chucknorris.io/jokes/'
+  readonly BASE_URL = 'https://api.chucknorris.io/jokes'
 
   constructor(private http: HttpClient) { }
 
@@ -21,7 +21,7 @@ export class ChuckapiService {
     for (const data of allDataRaw) {
       const fact: Fact = {
         id: data.id,
-        icon_url: data.icon_url['official-artwork'].front_default,
+        icon_url: data.icon_url,  // Cambia esto para usar solo data.icon_url
         value: data.value,
         url: data.url
       }
@@ -29,8 +29,6 @@ export class ChuckapiService {
       facts.push(fact);
     }
 
-    return facts
+    return facts;
   }
-
-
 }

@@ -1,1 +1,18 @@
-<p>chucknorris-random works!</p>
+<app-title></app-title>
+
+<section class="card">
+  @for (fact of facts; track fact.id) {
+    <a>
+      <img [src]="fact.icon_url">
+      
+      <br><br>
+
+      <div>{{fact.value}}</div>
+    </a>
+  } @empty {
+    <div>
+      <p>Cargando....</p>
+    </div>
+  }
+  
+</section>

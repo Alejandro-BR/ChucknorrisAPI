@@ -1,0 +1,15 @@
+
+section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+h1 {
+  letter-spacing: 1px; /* Espaciado de las letras para un look más limpio */
+  font-weight: bold; /* Asegura que el texto sea grueso */
+  color: #4a90e2;  /* Color azul suave, puedes cambiarlo según la estética */
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px 0;
+}
