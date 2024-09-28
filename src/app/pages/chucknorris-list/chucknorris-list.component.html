@@ -1,0 +1,33 @@
+<app-title></app-title>
+
+<section class="card">
+  <div *ngIf="categories.length > 0; else loading">
+    <div  class="button-container" *ngFor="let category of categories; let i = index">
+      <button (click)="getFacts(category, numberOfFacts)">{{ category }}</button>
+    </div>
+  </div>
+  <ng-template #loading>
+    <div>
+      <p>Cargando....</p>
+    </div>
+  </ng-template>
+</section>
+
+<!-- Formulario para seleccionar la cantidad de hechos -->
+<section>
+  <h2>Selecciona cuántos hechos deseas:</h2>
+  <input type="number" [(ngModel)]="numberOfFacts" min="1" placeholder="Número de hechos" />
+  <button (click)="getFacts(selectedCategory, numberOfFacts)">Obtener Hechos</button>
+</section>
+
+<section *ngIf="facts.length > 0">
+  <h2>Hechos de {{ selectedCategory }}</h2>
+  <div *ngFor="let fact of facts; let i = index" class="fact">
+    <p>{{ fact.value }}</p>
+    <img [src]="fact.icon_url" alt="Icono de Chuck Norris">
+    <hr>
+  </div>
+  <ng-template #noFacts>
+    <p>No se encontraron hechos.</p>
+  </ng-template>
+</section>
