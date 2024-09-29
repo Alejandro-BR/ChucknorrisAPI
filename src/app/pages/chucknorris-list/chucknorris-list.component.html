@@ -24,7 +24,7 @@
 
 <section>
   @if (facts.length > 0) {
-    <h2>Hechos de {{ selectedCategory | categoryTranslate | lowercase }}</h2>
+    <h2>Hechos de {{ selectedCategory | categoryTranslate | lowercase }}:</h2>
     @for (fact of facts; track $index) {
       <p>{{ fact.value }}</p>
       <img [src]="fact.icon_url" alt="Icono de Chuck Norris">
