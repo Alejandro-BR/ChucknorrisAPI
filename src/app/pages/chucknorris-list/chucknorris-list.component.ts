@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { TitleComponent } from "../../models/section/title/title.component";
 import { Fact } from '../../models/fact';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chucknorris-list',
@@ -19,7 +20,7 @@ export class ChucknorrisListComponent implements OnInit {
   selectedCategory: string = ''; // Para mostrar la categoría seleccionada
   numberOfFacts: number = 1; // Almacenar el número de hechos deseados
 
-  constructor(private chuckapi: ChuckapiService) { }
+  constructor(private chuckapi: ChuckapiService, private router: Router) { }
 
   async ngOnInit(): Promise<void> {
     try {
@@ -33,5 +34,9 @@ export class ChucknorrisListComponent implements OnInit {
   async getFacts(category: string, count: number) {
     this.selectedCategory = category; // Almacenar la categoría seleccionada
     this.facts = await this.chuckapi.facts(category, count); // Llamar a la API para obtener los hechos
+  }
+
+  goBack() {
+    this.router.navigateByUrl('/')
   }
 }
