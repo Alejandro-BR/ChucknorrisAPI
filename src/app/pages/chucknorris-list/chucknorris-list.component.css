@@ -1,5 +1,5 @@
 
-/* button {
+button {
   background-color: #4a90e2; 
   color: white;
   border: none; 
@@ -13,6 +13,7 @@
   border-radius: 5px; 
   width: 90px; 
   height: 60px;
+  margin: 10px;
 }
 
 button:hover {
@@ -24,16 +25,23 @@ button:hover {
   justify-content: center; 
   align-items: center; 
   gap: 20px;
-} */
-
-.button-container {
-  display: flex; /* Utiliza flexbox para alinear los botones horizontalmente */
-  gap: 10px; /* Espacio entre los botones */
 }
 
-button {
-  background-color: navy; /* Color azul marino */
-  color: white; /* Color del texto en blanco */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espaciado interno */
+input {
+  background-color: #4a90e2; 
+  color: white;
+  border: none; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block;
+  font-size: 16px; 
+  margin: 10px 0; 
+  border-radius: 5px; 
+  margin: 10px;
+}
+
+#getButtonList {
+  width: 200px; 
+  height: 39px;
 }
