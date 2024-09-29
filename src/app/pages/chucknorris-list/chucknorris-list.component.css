@@ -10,14 +10,13 @@ button {
   border-radius: 5px; 
   width: 130px; 
   height: 60px;
-  /* Eliminamos márgenes de los botones */
 }
 
 button:hover {
   background-color: #4281c9; 
 }
 
-/* Modificación del contenedor para centrar y distribuir los botones */
+
 .container {
   display: flex;
   justify-content: center;
@@ -28,11 +27,11 @@ button:hover {
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 botones por fila */
-  gap: 10px; /* Espacio uniforme entre botones */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
   justify-items: center;
   width: 100%;
-  margin: 0 auto; /* Centrar el grid dentro de la sección */
+  margin: 0 auto; 
 }
 
 input {
