@@ -29,8 +29,7 @@ export class ChuckapiService {
   async facts(category: string, count: number): Promise<Fact[]> {
     const requests: Observable<Object>[] = [];
 
-    // Hacemos múltiples solicitudes para obtener el número deseado de hechos
-    for (let i = 0; i < count; i++) { // Usa el número proporcionado por el usuario
+    for (let i = 0; i < count; i++) {
       requests.push(this.http.get(`${this.BASE_URL}/random?category=${category}`));
     }
 
@@ -47,7 +46,7 @@ export class ChuckapiService {
       facts.push(fact);
     }
 
-    return facts; // Regresar todos los hechos obtenidos
+    return facts;
 }
 
 }
