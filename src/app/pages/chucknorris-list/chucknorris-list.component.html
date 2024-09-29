@@ -3,7 +3,7 @@
 <section>
   @if (categories.length > 0) {
   @for (category of categories; track $index) {
-  <button (click)="getFacts(category, numberOfFacts)">{{ category }}</button>
+  <button (click)="getFacts(category, numberOfFacts)">{{ category | categoryTranslate }}</button>
   }
   } @else {
   <div>
@@ -24,7 +24,7 @@
 
 <section>
   @if (facts.length > 0) {
-    <h2>Hechos de {{ selectedCategory }}</h2>
+    <h2>Hechos de {{ selectedCategory | categoryTranslate | lowercase }}</h2>
     @for (fact of facts; track $index) {
       <p>{{ fact.value }}</p>
       <img [src]="fact.icon_url" alt="Icono de Chuck Norris">
